@@ -4,8 +4,8 @@
     --bg-gradient-end: light-dark(#3CB371,#16213e);
     --text-color: light-dark(#ffffff,#e4e4e4);
     --toggle-bg: light-dark(rgba(255, 255, 255, 0.3),rgba(65, 65, 65, 0.6));
-    --button-bg: light-dark(white, #667eea);
-    --button-text: light-dark(#667eea,white);
+    --button-bg: light-dark(#3CB371, #1a1a2e);
+    --button-text: light-dark(#1a1a2e,#3CB371);
     --shadow-color: rgba(0, 0, 0, 0.3);
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
@@ -22,10 +22,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.5s ease, color 0.5s ease;
     padding: 2rem;
     background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
@@ -57,8 +54,11 @@ body {
 
 .header-content-div {
   max-width: 95rem;
-  width: auto;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
 }
 
 @media (max-width: 991px) {
@@ -79,12 +79,11 @@ body {
 }
 
 nav {
-  position: relative;
-  top: 0.8rem;
-  float: right;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   font-size: 1.6rem;
   font-weight: 500;
-  padding: 1.5rem 0;
 }
 
 @media (max-width: 800px) {
@@ -98,10 +97,9 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  color: #333;
-  margin: 0 0.5rem;
-  padding: 0 0.6rem;
-  transition: border-bottom 0.2s;
+  color: var(--text-color);
+  padding: 0.5rem 0.6rem;
+  transition: border-bottom 0.2s, color 0.2s;
 }
 
 @media (max-width: 475px) {
@@ -121,16 +119,9 @@ nav {
   color: #f84848;
 }
 
-.container {
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-}
-
 .toggle-container {
-    position: relative;
-    top: -25px;
-    right: -530px;
+  display: flex;
+  align-items: center;
 }
 
 .toggle-switch {
@@ -186,22 +177,22 @@ input:checked + .slider:before {
     background-color: #2d2d2d;
 }
 
-h1 {
-    font-size: 4rem;
+#welcome-message {
+    font-size: 60px;
     font-weight: 800;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 20px var(--shadow-color);
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    opacity: 0.9;
+    font-size: 24px;
+    font-weight: 700;
     margin-bottom: 3rem;
 }
 
 .cta-button {
     padding: 1rem 3rem;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 600;
     border: none;
     border-radius: 50px;
@@ -215,4 +206,35 @@ h1 {
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.container-fluid {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.landing-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+}
+
+.centered {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 800px);
+    padding: 3rem 4rem;
+    text-align: center;
+    color: var(--text-color);
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px var(--shadow-color);
 }
