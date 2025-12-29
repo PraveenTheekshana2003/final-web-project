@@ -238,3 +238,103 @@ input:checked + .slider:before {
     border-radius: 20px;
     box-shadow: 0 20px 50px var(--shadow-color);
 }
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  width: 60%;
+  height: 100px;
+  font-size: 12px;
+}
+
+.glass-card {
+  width: 280px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(54, 92, 190, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+  width:100%;
+  position:absolute;
+  top:2760px;
+  left:0px;
+}
+
+.fa {
+  padding:18px;
+  font-size:30px;
+  width:50px;
+  height:50px;
+  border-radius:100%;
+  text-align:center;
+  text-decoration:none;
+}
+
+.fa-facebook {
+  background:#3B5998;
+  color:white;
+}
+
+.fa-facebook:hover {
+  background:#1B1B0D;
+  color:white;
+}
+
+.fa-twitter {
+  background:#55ACEE;
+  color:white;
+}
+
+.fa-twitter:hover {
+  background:#1B1B0D;
+  color:white;
+}
+
+.fa-whatsapp {
+  background:#25D366;
+  color:white;
+}
+
+.fa-whatsapp:hover {
+  background:#1B1B0D;
+  color:white;
+}
+
+.fa-youtube {
+  background:#bb0000;
+  color:white;
+}
+
+.fa-youtube:hover {
+  background:#1B1B0D;
+  color:white;
+}
