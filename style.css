@@ -289,6 +289,93 @@ hr {
   border-top: 4px solid var(--link-hover-color);
 }
 
+.book-section {
+  padding: 40px;
+}
+
+.book-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.book-card {
+  min-width: 180px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.book-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.book-card h4 {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 14px;
+}
+
+.price .new {
+  color: red;
+  font-weight: bold;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 12px;
+}
+
+.discount {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #1e88e5;
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+.rank {
+  position: absolute;
+  bottom: 80px;
+  left: -5px;
+  background: red;
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.nav {
+  position: absolute;
+  top: 40%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
 .scroll-text {
   text-align: center;
   font-size: 48px;
@@ -303,7 +390,6 @@ hr {
 #our-map {
   height: 100vh;
   position: relative;
-  z-index: 1000;
   width: 1500px;
   top: 50px;
   left: -99px;
@@ -322,7 +408,6 @@ hr {
   position:absolute;
   top:400px;
   left:200px;
-  z-index:10000;
 }
 
 #footer {
