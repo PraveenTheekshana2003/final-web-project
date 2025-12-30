@@ -7,6 +7,9 @@
     --button-bg: light-dark(#3CB371, #1a1a2e);
     --button-text: light-dark(#1a1a2e,#3CB371);
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --sub-element-bg: rgba(54, 92, 190, 0.6);
+    --link-hover-color: #e23d3d;
+    --link-active-color: #f84848;
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -111,12 +114,12 @@ nav {
 }
 
 .nav-link:hover {
-  color: #e23d3d;
-  border-bottom: 2px solid #e23d3d;
+  color: var(--link-hover-color);
+  border-bottom: 2px solid var(--link-hover-color);
 }
 
 .nav-link:active {
-  color: #f84848;
+  color: var(--link-active-color);
 }
 
 .toggle-container {
@@ -274,7 +277,7 @@ input:checked + .slider:before {
   width: 280px;
   padding: 2rem;
   text-align: center;
-  background: rgba(54, 92, 190, 0.6);
+  background: var(--sub-element-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -282,10 +285,50 @@ input:checked + .slider:before {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
+hr {
+  border-top: 4px solid var(--link-hover-color);
+}
+
+.scroll-text {
+  text-align: center;
+  font-size: 48px;
+}
+
+.get-in-touch-description {
+  font-weight:bold;
+  font-size:16px;
+  text-align: center;
+}
+
+#our-map {
+  height: 100vh;
+  position: relative;
+  z-index: 1000;
+  width: 1500px;
+  top: 50px;
+  left: -99px;
+  background: var(--sub-element-bg);
+  overflow-x: hidden;
+}
+
+#map{
+  width:500px;
+  height:450px;
+}
+
+#map-description{
+  font-weight:bold;
+  font-size:32px;
+  position:absolute;
+  top:400px;
+  left:200px;
+  z-index:10000;
+}
+
 #footer {
   width:100%;
-  position:absolute;
-  top:2760px;
+  position:relative;
+  top:3000px;
   left:0px;
   background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
 }
@@ -338,4 +381,39 @@ input:checked + .slider:before {
 .fa-youtube:hover {
   background:#1B1B0D;
   color:white;
+}
+
+#back-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border: 1px solid #1B1B0D;
+  border-radius: 50%;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4),
+              0 6px 20px rgba(0,0,0,0.19);
+}
+
+.arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+#back-to-top-button:hover {
+  background-color: var(--text-color);
+  color: var(--button-bg);
+}
+
+#back-to-top-button:active {
+  box-shadow: 0 2px #000000;
+  transform: translateY(0.1px);
 }

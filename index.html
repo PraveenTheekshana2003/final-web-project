@@ -37,7 +37,7 @@
     </header>
     <!-- header section ends -->
 
-        <div class="container-fluid">
+        <div class="container-fluid" id="welcome">
             <img src="landing image.jpg" alt="Snow" class="landing-img">
             <div class="centered">
                 <h1 id="welcome-message">Welcome</h1>
@@ -69,6 +69,47 @@
                     <span class="featureDesc">Keep in touch via email and support system.</span>
 	            </div>
             </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+            <br/><br/><br/><br/><br/>
+            <h1 class="scroll-text">Get in touch with us!</h1>
+
+            <div class="get-in-touch-description">
+                <p>
+                    <br/><br/><br/>
+                    Welcome to Serangreen Holdings (PVT) Ltd, a multifaceted enterprise dedicated to excellence across diverse sectors. 
+                    Nestled in the lush landscapes of our tea plantation, we cultivate premium teas renowned for their rich flavors and natural goodness. 
+                    Our food and beverage division prides itself on delivering high-quality, nutritious products that delight taste buds and nourish the body.<br/><br/>
+
+                    In the textile industry, we combine tradition with innovation to produce fabrics that are both aesthetically pleasing and sustainably sourced. 
+                    Our pharmaceutical branch is committed to advancing health and wellness by developing and distributing effective, safe, and affordable medications.<br/><br/>
+
+                    At Serangreen, our mission is to enhance lives through quality, sustainability, and a passion for perfection in everything we do. 
+                    Join us on our journey as we continue to grow and innovate, bringing the best of nature and science to you.
+                </p>
+            </div>
+
+                <!--   map starts here   -->
+                <div class="map-background">
+                    <div id="our-map">
+                        <div id="map-description">
+                        How can you find us!
+                        </div>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.491751312695!2d80.50048357477242!3d8.353188691683624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afc8a61622cfbe9%3A0xf448ce3a729f9cec!2sLibrary%2C%20Faculty%20of%20Applied%20Sciences!5e0!3m2!1sen!2slk!4v1767123362233!5m2!1sen!2slk"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            style="width:700px; height:550px; z-index:10000;
+                                    position:absolute; top:120px; left:700px;"></iframe>
+                    </div>
+                    </div>
+                </div>
+                <!--    map ends here    -->
+                
         </div>
 
         <!-- Footer -->
@@ -202,7 +243,25 @@
         </footer>
         <!-- Footer -->
 
+        <!-- back to top button -->
+        <a href="#welcome">
+            <button id="back-to-top-button">
+                <span style="font-size: 24px;">&#11165;</span>
+            </button>
+        </a>
+        <!-- back to top button ends -->
+
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.from(".scroll-text", {
+                scrollTrigger: ".scroll-text",
+                opacity: 0,
+                y: 50,
+                duration: 1
+            });
+        </script>
 </body>
 </html>
