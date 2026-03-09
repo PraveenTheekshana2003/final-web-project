@@ -51,3 +51,25 @@ carousels.forEach((carousel) => {
         }
     });
 });
+
+function addToCart(title, price, image) {
+    const book = { title, price, image, id: Date.now() }; // Added ID for removal
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push(book);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    window.location.href = 'cart.html';
+}
+
+// Cross-page filtering for explore.html
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.includes('explore.html')) {
+        const filter = localStorage.getItem('filter');
+        if (filter) {
+            if (typeof filterBooks === 'function') {
+                filterBooks(filter);
+                localStorage.removeItem('filter'); // Clear after use
+            }
+        }
+    }
+});
+

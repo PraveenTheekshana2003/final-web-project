@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us | Future Books</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\circular logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        p,
+        .fs-5 {
+            font-size: 1.4rem !important;
+            line-height: 1.8;
+        }
+
+        .about-hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('landing image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--link-hover-color);
+            border-radius: 2px;
+        }
+
+        .glass-card-modern {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 60px 40px;
+            transition: transform 0.3s ease;
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .glass-card-modern:hover {
+            transform: translateY(-10px);
+        }
+
+        .stats-box {
+            background: var(--button-bg);
+            color: var(--button-text);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .mission-vision {
+            background: var(--sub-element-bg);
+            border-radius: 30px;
+            padding: 60px;
+            margin-top: 50px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--link-hover-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-content-div">
+            <a href="index.html">
+                <img src="images\logo.png" alt="Company Logo" id="header-img" />
+            </a>
+            <nav id="nav-bar">
+                <a href="explore.html" class="nav-link">EXPLORE</a>
+                <a href="index.html#top-rated" class="nav-link">TOP RATED</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="index.html#map" class="nav-link">OUR SERVICE</a>
+                <a href="login.html" class="nav-link">LOGIN</a>
+                <div class="toggle-container">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-hero" id="welcome">
+        <div class="container">
+            <h1 class="display-1 fw-bold mb-4">Our Store, Your Story</h1>
+            <p class="lead fs-3">Building a futuristic gateway to the world of literature.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Who We Are</h2>
+                    <p class="fs-5">Future Books is more than just an online bookstore; it's a digital ecosystem born
+                        from the legacy of <strong>Serangreen Holdings (PVT) Ltd</strong>. Founded with a vision to
+                        revolutionize the reading experience in Sri Lanka, we bridge the gap between timeless traditions
+                        and modern convenience.</p>
+                    <p class="fs-5">Our journey began in the vibrant heart of Galle, fueled by a passion for preserving
+                        the rich heritage of Sinhala literature while making global English masterpieces accessible to
+                        everyone, everywhere.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stats-box">
+                                <span class="stat-number">10k+</span>
+                                <span>Books Collection</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-box">
+                                <span class="stat-number">5k+</span>
+                                <span>Happy Readers</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-box">
+                                <span class="stat-number">24/7</span>
+                                <span>Customer Support</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-box">
+                                <span class="stat-number">Galle</span>
+                                <span>Our Roots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-vision">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h3><i class="fa fa-bullseye me-2" style="color:var(--link-hover-color)"></i> Our Mission</h3>
+                        <p class="fs-5">To inspire and empower every individual by providing seamless access to a
+                            diverse world of knowledge, fostering a culture of reading that transcends boundaries.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><i class="fa fa-eye me-2" style="color:var(--link-hover-color)"></i> Our Vision</h3>
+                        <p class="fs-5">To be the most trusted and innovative digital library in South Asia, where every
+                            book tells a story and every reader finds a friend.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section bg-light text-dark">
+        <div class="container text-center">
+            <h2 class="section-title text-center">Our Core Values</h2>
+            <div class="row mt-5 g-4">
+                <div class="col-md-4">
+                    <div class="glass-card-modern shadow-sm"
+                        style="background: rgba(0, 206, 209, 0.15); border-color: rgba(0, 206, 209, 0.3);">
+                        <div class="fs-1 mb-3">🛡️</div>
+                        <h4 style="color: #00CED1;">Integrity</h4>
+                        <p>We handle every order with precision and honesty, ensuring your trust is always our priority.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card-modern shadow-sm"
+                        style="background: rgba(60, 179, 113, 0.15); border-color: rgba(60, 179, 113, 0.3);">
+                        <div class="fs-1 mb-3">🍃</div>
+                        <h4 style="color: #3CB371;">Sustainability</h4>
+                        <p>Leveraging Serangreen's eco-philosophy, we focus on digital solutions to reduce our carbon
+                            footprint.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card-modern shadow-sm"
+                        style="background: rgba(226, 61, 61, 0.15); border-color: rgba(226, 61, 61, 0.3);">
+                        <div class="fs-1 mb-3">🔥</div>
+                        <h4 style="color: #e23d3d;">Passion</h4>
+                        <p>We are driven by a deep love for literature and a commitment to serving our community of book
+                            lovers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container text-center">
+            <h2 class="section-title">Meet the Visionaries</h2>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-md-4 team-member">
+                    <img src="https://i.pravatar.cc/150?u=praveen" alt="Praveen Theekshana">
+                    <h4>Praveen Theekshana</h4>
+                    <p class="text-muted">Founder & CEO</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://i.pravatar.cc/150?u=design" alt="Design Lead">
+                    <h4>Sarah Jennings</h4>
+                    <p class="text-muted">Creative Director</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="d-flex justify-content-between p-4" style="background-color:#F7F745; color: black;">
+            <div class="me-5">
+                <span style="font-size:22px;">Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-whatsapp"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Future Books</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>Your ultimate destination for discovering amazing stories and expanding your knowledge.</p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Categories</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="explore.html" class="text-white" onclick="localStorage.setItem('filter', 'sinhala-novel')">Sinhala Novels</a></p>
+                        <p><a href="explore.html" class="text-white" onclick="localStorage.setItem('filter', 'english-novel')">English Novels</a></p>
+                        <p><a href="explore.html" class="text-white" onclick="localStorage.setItem('filter', 'sinhala-poem')">Sinhala Poems</a></p>
+                        <p><a href="explore.html" class="text-white">Browse All</a></p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="index.html" class="text-white">Home</a></p>
+                        <p><a href="about.html" class="text-white">About Us</a></p>
+                        <p><a href="cart.html" class="text-white">My Cart</a></p>
+                        <p><a href="index.html#map" class="text-white">Location</a></p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact Us</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <address>&#127968; Madangahawattha,<br /> Navinna Road, Galle.</address>
+                        <p>&#9993; info@futurebooks.lk</p>
+                        <p>&#9742; +94 766 980 713</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-3" style="background-color:rgba(0, 0, 0, 0.2);">
+            © 2026 Copyright:
+            <span class="text-white">Future Books - All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <a href="#welcome">
+        <button id="back-to-top-button">
+            <span style="font-size: 24px;">&#11165;</span>
+        </button>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".section-title", {
+            scrollTrigger: ".section-title",
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            stagger: 0.3
+        });
+        gsap.from(".glass-card-modern", {
+            scrollTrigger: ".glass-card-modern",
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2
+        });
+        gsap.from(".stats-box", {
+            scrollTrigger: ".stats-box",
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1
+        });
+    </script>
+</body>
+
+</html>
