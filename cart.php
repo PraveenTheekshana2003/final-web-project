@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header("Location: login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
     <title>Your Cart | Future Books</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images\circular logo.png">
+    <link rel="icon" type="image/x-icon" href="images/circular logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -89,13 +96,13 @@
     <header id="header">
         <div class="header-content-div">
             <a href="index.html">
-                <img src="images\logo.png" alt="Company Logo" id="header-img" />
+                <img src="images/logo.png" alt="Company Logo" id="header-img" />
             </a>
             <nav id="nav-bar">
                 <a href="explore.html" class="nav-link">EXPLORE</a>
                 <a href="index.html#top-rated" class="nav-link">TOP RATED</a>
                 <a href="about.html" class="nav-link">ABOUT</a>
-                <a href="login.html" class="nav-link">LOGIN</a>
+                <a href="auth/logout.php" class="nav-link">LOGOUT (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a>
                 <div class="toggle-container">
                     <label class="toggle-switch">
                         <input type="checkbox" id="darkModeToggle">
@@ -145,19 +152,19 @@
             <div class="col-lg-5">
                 <div class="checkout-form">
                     <h4 class="fw-bold mb-4">Secure Checkout</h4>
-                    <form action="checkout.php" method="POST" id="checkoutForm">
+                    <form action="checkout.php" method="POST" id="checkoutForm" novalidate>
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
-                            <input type="text" name="fullname" class="form-control" required placeholder="John Doe">
+                            <input type="text" name="fullname" id="fullname" class="form-control" required placeholder="John Doe" pattern="[A-Za-z\s]{2,}" title="Please enter a valid full name (letters only)">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Delivery Address</label>
-                            <textarea name="address" class="form-control" rows="3" required
+                            <textarea name="address" id="address" class="form-control" rows="3" required
                                 placeholder="Your address in Sri Lanka"></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Contact Number</label>
-                            <input type="tel" name="contact" class="form-control" required placeholder="+94 77 XXX XXXX">
+                            <input type="tel" name="contact" id="contact" class="form-control" required placeholder="+94 77 XXX XXXX" pattern="(\+94|0)[0-9]{9,10}" title="Enter a valid Sri Lankan number e.g. +94771234567">
                         </div>
                         <input type="hidden" name="cart_data" id="cartDataInput">
                         <div class="mt-4">
@@ -217,7 +224,7 @@
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
                         <p><a href="index.html" class="text-white">Home</a></p>
                         <p><a href="about.html" class="text-white">About Us</a></p>
-                        <p><a href="cart.html" class="text-white">My Cart</a></p>
+                        <p><a href="cart.php" class="text-white">My Cart</a></p>
                         <p><a href="index.html#map" class="text-white">Location</a></p>
                     </div>
 
@@ -240,14 +247,49 @@
 
     <script src="script.js"></script>
     <script>
-        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+        // Explicitly render cart when this PHP page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            renderCart();
+        });
+
+        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fullname = document.getElementById('fullname').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const contact = document.getElementById('contact').value.trim();
             const cartItems = localStorage.getItem('cartItems');
+
+            // Validate cart
             if (!cartItems || JSON.parse(cartItems).length === 0) {
-                e.preventDefault();
                 alert("Your cart is empty! Please add items before checking out.");
                 return;
             }
+
+            // Validate fullname — allow letters, spaces, and common name characters
+            if (fullname.length < 2) {
+                alert("Please enter your full name (at least 2 characters).");
+                document.getElementById('fullname').focus();
+                return;
+            }
+
+            // Validate address
+            if (address.length < 10) {
+                alert("Please enter a complete delivery address.");
+                document.getElementById('address').focus();
+                return;
+            }
+
+            // Validate contact - Sri Lankan number
+            if (!/^(\+94|0)[0-9]{9,10}$/.test(contact.replace(/\s/g, ''))) {
+                alert("Please enter a valid Sri Lankan contact number (e.g. +94771234567 or 0771234567).");
+                document.getElementById('contact').focus();
+                return;
+            }
+
+            // All valid — inject cart data and submit
             document.getElementById('cartDataInput').value = cartItems;
+            this.submit();
         });
     </script>
 </body>

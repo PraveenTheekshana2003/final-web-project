@@ -343,11 +343,11 @@
             <h1 class="fw-bold mb-3">Create Account</h1>
             <p class="description-text">Join our community today! Please fill in your details to get started on your
                 literary journey.</p>
-            <form>
-                <input type="text" class="form-control" placeholder="Full Name">
-                <input type="email" class="form-control" placeholder="Email Address">
-                <input type="password" class="form-control" placeholder="Password">
-                <button type="button" class="auth-btn">SIGN UP</button>
+            <form action="auth/register.php" method="POST">
+                <input type="text" name="username" class="form-control" placeholder="Full Name" required>
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                <button type="submit" class="auth-btn">SIGN UP</button>
             </form>
         </div>
 
@@ -356,13 +356,13 @@
             <h1 class="fw-bold mb-3">Welcome Back!</h1>
             <p class="description-text">We've missed you! Please log in with your credentials to continue exploring our
                 book collections.</p>
-            <form>
-                <input type="email" class="form-control" placeholder="Email Address">
-                <input type="password" class="form-control" placeholder="Password">
+            <form action="auth/login.php" method="POST">
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
                 <div class="text-end mb-3">
                     <a href="#" class="text-white-50 text-decoration-none small">Forgot Password?</a>
                 </div>
-                <button type="button" class="auth-btn">LOG IN</button>
+                <button type="submit" class="auth-btn">LOG IN</button>
             </form>
             <div class="mt-4 text-center">
                 <p class="text-white-50 mb-3">Or login with</p>
