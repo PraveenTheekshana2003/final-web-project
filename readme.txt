@@ -243,6 +243,3 @@ Faculty of Applied Sciences, Rajarata University of Sri Lanka
 - Student ID: `ASP/2023/165` · Index: `6316`
 - GitHub: [@praveentheekshana2003](https://github.com/praveentheekshana2003)
 
----
-
-*If you found this project helpful, please consider giving it a ⭐ — it means a lot!*
