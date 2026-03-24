@@ -1,7 +1,4 @@
-<div align="center">
-
 # 📚 Future Books
-
 ### *Your Next Chapter Awaits*
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -10,15 +7,11 @@
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-
-[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://praveentheekshana2003.github.io/final-web-project/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://praveentheekshana2003.github.io/final-web-project/)
 
 > A full-featured **online bookstore** web application with cart management, user authentication, and a curated collection of Sinhala and English books — built as a final web development project.
 
-**[🌐 View Live Demo](https://praveentheekshana2003.github.io/final-web-project/)** &nbsp;·&nbsp; **[🐛 Report Bug](https://github.com/praveentheekshana2003/final-web-project/issues)** &nbsp;·&nbsp; **[✨ Request Feature](https://github.com/praveentheekshana2003/final-web-project/issues)**
-
-</div>
+🌐 **[View Live Demo](https://praveentheekshana2003.github.io/final-web-project/)** · 🐛 **[Report Bug](https://github.com/praveentheekshana2003/final-web-project/issues)** · ✨ **[Request Feature](https://github.com/praveentheekshana2003/final-web-project/issues)**
 
 ---
 
@@ -64,19 +57,19 @@ This project was developed as the **Final Assignment** for a Web Design & Develo
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend**
 - **HTML5** — Semantic markup and page structure
 - **CSS3** — Custom styling, animations, and glassmorphism effects
 - **JavaScript (ES6+)** — Cart logic, dark mode, carousel, and dynamic rendering
 - **Bootstrap 5** — Responsive grid, components, and utilities
 - **Font Awesome 4.7** — Icon set used throughout the UI
 
-### Backend
+**Backend**
 - **PHP 8+** — Server-side logic for authentication, sessions, and checkout
 - **MySQL** — Relational database for users and orders
 - **XAMPP / MySQLi** — Local development environment
 
-### Hosting
+**Hosting**
 - **GitHub Pages** — Static frontend deployment
 - **XAMPP (Apache + MySQL)** — Local full-stack development server
 
@@ -87,42 +80,39 @@ This project was developed as the **Final Assignment** for a Web Design & Develo
 ```
 final-web-project-master/
 │
-├── 📄 index.html              # Home page — hero, features, top-rated books, map
-├── 📄 about.html              # About Us page
-├── 📄 explore.html            # Browse & filter all books
-├── 📄 login.html              # Login UI (frontend form)
-├── 📄 cart.html               # Static cart view
-├── 📄 cart.php                # Dynamic cart with PHP session data
-├── 📄 checkout.php            # Checkout form — saves orders to database
-├── 📄 session_check.php       # Validates if user session is active (used by JS)
+├── index.html               # Home page — hero, features, top-rated books, map
+├── about.html               # About Us page
+├── explore.html             # Browse & filter all books
+├── login.html               # Login UI (frontend form)
+├── cart.html                # Static cart view
+├── cart.php                 # Dynamic cart with PHP session data
+├── checkout.php             # Checkout form — saves orders to database
+├── session_check.php        # Validates if user session is active (used by JS)
+├── style.css                # Global stylesheet (dark mode, glass cards, layout)
+├── script.js                # Client-side JS — cart, dark mode, carousel, filters
+├── future_books_setup.sql   # Full MySQL database schema + demo data
 │
-├── 📂 auth/                   # Authentication logic
-│   ├── 🔑 login.php           # Handles login form submission & session creation
-│   ├── 🚪 logout.php          # Destroys session and redirects
-│   └── 📝 register.php        # Handles new user registration
+├── auth/
+│   ├── login.php            # Handles login form submission & session creation
+│   ├── logout.php           # Destroys session and redirects
+│   └── register.php         # Handles new user registration
 │
-├── 📂 includes/               # Shared PHP helpers
-│   ├── 🔌 db.php              # MySQL database connection (MySQLi)
-│   └── 🧰 functions.php       # Reusable helper functions
+├── includes/
+│   ├── db.php               # MySQL database connection (MySQLi)
+│   └── functions.php        # Reusable helper functions
 │
-├── 📂 images/                 # All image assets
-│   ├── 🖼️ logo.png            # Full site logo (header)
-│   ├── 🔵 circular logo.png   # Favicon / circular logo variant
-│   ├── 🏞️ landing image.jpg   # Hero section background image
-│   ├── 🚚 free shipping.png   # Feature icon — Free Shipping
-│   ├── 🔄 returning goods.png # Feature icon — 30 Days Return
-│   ├── 🎁 gift cards.png      # Feature icon — Gift Cards
-│   ├── 📞 contact us.png      # Feature icon — Contact Us
-│   └── 👤 profile.png         # User profile avatar placeholder
+├── images/
+│   ├── logo.png             # Full site logo (header)
+│   ├── circular logo.png    # Favicon / circular logo variant
+│   ├── landing image.jpg    # Hero section background image
+│   ├── free shipping.png    # Feature icon — Free Shipping
+│   ├── returning goods.png  # Feature icon — 30 Days Return
+│   ├── gift cards.png       # Feature icon — Gift Cards
+│   ├── contact us.png       # Feature icon — Contact Us
+│   └── profile.png          # User profile avatar placeholder
 │
-├── 🎨 style.css               # Global stylesheet (dark mode, glass cards, layout)
-├── ⚡ script.js               # Client-side JS — cart, dark mode, carousel, filters
-├── 🗃️ future_books_setup.sql  # Full MySQL database schema + demo data
-│
-├── 📂 .vscode/
-│   └── ⚙️ settings.json       # VS Code workspace settings
-│
-└── 📖 readme.txt              # Original plain-text readme
+└── .vscode/
+    └── settings.json        # VS Code workspace settings
 ```
 
 ---
@@ -133,18 +123,20 @@ final-web-project-master/
 
 Make sure you have the following installed:
 
-- [XAMPP](https://www.apachefriends.org/) (Apache + MySQL + PHP)
+- [XAMPP](https://www.apachefriends.org/) — Apache + MySQL + PHP
 - A modern browser (Chrome, Firefox, Edge)
 - [Git](https://git-scm.com/) *(optional, for cloning)*
 
 ### Installation
 
 **1. Clone the repository**
+
 ```bash
 git clone https://github.com/praveentheekshana2003/final-web-project.git
 ```
 
 **2. Move to XAMPP's web root**
+
 ```bash
 # Windows
 move final-web-project C:\xampp\htdocs\final-web-project
@@ -154,13 +146,14 @@ mv final-web-project /opt/lampp/htdocs/final-web-project
 ```
 
 **3. Start XAMPP**
-- Open **XAMPP Control Panel**
+- Open the XAMPP Control Panel
 - Start **Apache** ✅
 - Start **MySQL** ✅
 
 **4. Set up the database** *(see section below)*
 
-**5. Open in browser**
+**5. Open in your browser**
+
 ```
 http://localhost/final-web-project/
 ```
@@ -171,112 +164,85 @@ http://localhost/final-web-project/
 
 ## 🗄️ Database Setup
 
-**1.** Open **phpMyAdmin**: `http://localhost/phpmyadmin`
+**Step 1** — Open phpMyAdmin at `http://localhost/phpmyadmin`
 
-**2.** Create a new database:
+**Step 2** — Create a new database:
+
 ```
-Name: futurebooks_fixed
+Name:      futurebooks_fixed
 Collation: utf8mb4_general_ci
 ```
 
-**3.** Click the **SQL** tab and paste the contents of `future_books_setup.sql`, then click **Go**.
+**Step 3** — Click the **SQL** tab, paste the full contents of `future_books_setup.sql`, and click **Go**.
 
-This will create:
-- `users` table — with 5 pre-loaded demo accounts
-- `orders` table — for storing customer orders
+This creates the `users` and `orders` tables along with 5 pre-loaded demo accounts.
 
-**Demo Login Credentials:**
+**Demo Login Credentials**
 
 | Username | Email | Password |
-|----------|-------|----------|
+|---|---|---|
 | Kasun Perera | kasun@gmail.com | `Demo@1234` |
 | Nimasha Silva | nimasha@gmail.com | `Demo@1234` |
 | Raveen Fernando | raveen@gmail.com | `Demo@1234` |
+| Dilini Jayawardena | dilini@yahoo.com | `Demo@1234` |
+| Sampath Wickrama | sampath@hotmail.com | `Demo@1234` |
 
 ---
 
 ## 📖 Pages & Functionality
 
-### 🏠 `index.html` — Home Page
-- Full-screen hero section with a call-to-action
-- Glass-card feature grid (Free Shipping, 30-Day Return, Gift Cards, Contact)
-- Book carousel for bestselling Sinhala novels
-- Top-rated books section
-- About section and embedded service map
+### 🏠 Home — `index.html`
+Full-screen hero section with a call-to-action, glassmorphism feature cards (Free Shipping, 30-Day Return, Gift Cards, Contact), a book carousel for bestselling Sinhala novels, a top-rated books section, and an embedded service map.
 
-### 🔍 `explore.html` — Explore Books
-- Full book catalogue with category filter functionality
-- JavaScript-powered filtering — no page reload
+### 🔍 Explore — `explore.html`
+Full book catalogue with JavaScript-powered category filtering — no page reload required.
 
-### 🛒 `cart.php` — Shopping Cart
-- Renders cart items stored in `localStorage`
-- Displays item images, titles, prices, and totals
-- Proceed to checkout button
+### 🛒 Cart — `cart.php`
+Renders cart items stored in `localStorage`. Displays item titles, prices, and totals with a proceed-to-checkout button.
 
-### 💳 `checkout.php` — Checkout
-- Collects delivery details (name, address, contact)
-- Saves order data to the MySQL `orders` table
+### 💳 Checkout — `checkout.php`
+Collects delivery details (name, address, contact) and saves the completed order to the MySQL `orders` table.
 
-### 🔐 `auth/login.php` — Login
-- Validates credentials against database
-- Creates PHP session on success
-- Redirects to home on successful login
+### 🔐 Login & Register — `auth/login.php` · `auth/register.php`
+Login validates credentials against the database and creates a PHP session on success. Registration hashes passwords with `password_hash()` before storing them securely.
 
-### 📝 `auth/register.php` — Register
-- Validates and hashes password with `password_hash()`
-- Stores new user in `users` table
-
-### 🔌 `session_check.php` — Session API
-- Called via `fetch()` from JavaScript
-- Returns JSON indicating if a user is logged in
-- Used to guard the "Add to Cart" action
+### 🔌 Session Check — `session_check.php`
+A lightweight endpoint called via `fetch()` from JavaScript. Returns JSON indicating whether a user is logged in — used to guard the *Add to Cart* action.
 
 ---
 
 ## 🚀 Deployment
 
-The **static frontend** is deployed on GitHub Pages:
+The static frontend is live on GitHub Pages:
 
-🔗 **[https://praveentheekshana2003.github.io/final-web-project/](https://praveentheekshana2003.github.io/final-web-project/)**
+🔗 **https://praveentheekshana2003.github.io/final-web-project/**
 
-> **Note:** The live demo uses the static HTML/CSS/JS files only. PHP backend features (login, cart persistence via sessions, checkout) require a local PHP + MySQL server (XAMPP) to function fully.
+> **Note:** The live demo serves static HTML/CSS/JS only. PHP backend features — login, session-based cart, and checkout — require a local PHP + MySQL server (XAMPP) to function fully.
 
 ---
 
 ## 🔮 Future Improvements
 
 - [ ] 🔎 **Search functionality** — Search books by title or author
-- [ ] 🌐 **Full backend deployment** — Host PHP + MySQL on a live server (e.g. cPanel, Railway)
-- [ ] 💳 **Payment gateway integration** — Add Stripe or PayPal for real transactions
-- [ ] 👤 **User profile page** — View order history and update account details
+- [ ] 🌐 **Full backend deployment** — Host PHP + MySQL on a live server (cPanel, Railway, etc.)
+- [ ] 💳 **Payment gateway** — Integrate Stripe or PayPal for real transactions
+- [ ] 👤 **User profile page** — View order history and manage account details
 - [ ] ♿ **Accessibility improvements** — ARIA labels, keyboard navigation, contrast fixes
-- [ ] ⚡ **Performance optimization** — Lazy-load images, minify assets
+- [ ] ⚡ **Performance optimization** — Lazy-load images, minify CSS and JS assets
 - [ ] 📧 **Email notifications** — Send order confirmation emails via PHPMailer
-- [ ] 🔑 **Password reset** — Implement forgot-password flow
+- [ ] 🔑 **Password reset flow** — Forgot password with email verification
 
 ---
 
 ## 👨‍💻 Author
 
-<div align="center">
-
 **Praveen Theekshana**
+Second Year Computer Science Student
+Faculty of Applied Sciences, Rajarata University of Sri Lanka
 
-*Second Year Computer Science Student*
-*Faculty of Applied Sciences, Rajarata University of Sri Lanka*
-
-`ASP/2023/165` · `Index: 6316`
-
-[![GitHub](https://img.shields.io/badge/GitHub-praveentheekshana2003-181717?style=for-the-badge&logo=github)](https://github.com/praveentheekshana2003)
-
-</div>
+- Student ID: `ASP/2023/165` · Index: `6316`
+- GitHub: [@praveentheekshana2003](https://github.com/praveentheekshana2003)
 
 ---
 
-<div align="center">
-
-Made with ❤️ and lots of ☕ by **Praveen Theekshana**
-
-⭐ *If you found this project helpful, please give it a star!* ⭐
-
-</div>
+*If you found this project helpful, please consider giving it a ⭐ — it means a lot!*
