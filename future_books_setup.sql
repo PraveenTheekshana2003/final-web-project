@@ -11,7 +11,9 @@
 -- 5. Paste this entire file and click "Go"
 -- ============================================================
 
-USE future_books;
+CREATE DATABASE futurebooks_fixed;
+
+USE futurebooks_fixed;
 
 -- ============================================================
 -- 1. USERS TABLE
